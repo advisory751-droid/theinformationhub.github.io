@@ -1,114 +1,84 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Information Hub</title>
-<meta name="description" content="The Information Hub - Your go-to source for Lifestyle, Business, Travel, Entertainment and Technology insights.">
-
-<style>
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f4f6f9;
+    font-family: 'Segoe UI', sans-serif;
+    background: #f4f6f9;
     color: #333;
 }
 
+/* HEADER */
 header {
     background: #111827;
     color: white;
-    padding: 20px 40px;
+    padding: 12px 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 header h1 {
+    font-size: 20px;
     margin: 0;
 }
 
 nav a {
     color: white;
-    margin-left: 20px;
     text-decoration: none;
-    font-weight: bold;
+    margin-left: 20px;
+    font-size: 14px;
 }
 
 nav a:hover {
     color: #38bdf8;
 }
 
+/* HERO */
 .hero {
-    background: linear-gradient(to right, #2563eb, #1e3a8a);
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: white;
-    padding: 80px 20px;
     text-align: center;
 }
 
 .hero h2 {
-    font-size: 40px;
-    margin-bottom: 10px;
+    background: rgba(0,0,0,0.6);
+    padding: 15px 25px;
+    border-radius: 8px;
 }
 
+/* CATEGORY GRID */
 .container {
-    max-width: 1100px;
-    margin: auto;
-    padding: 40px 20px;
+    padding: 40px;
 }
 
-.categories {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-    margin-bottom: 30px;
-}
-
-.category-btn {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 20px;
-    background: #e5e7eb;
-    cursor: pointer;
-    font-weight: bold;
-}
-
-.category-btn:hover {
-    background: #2563eb;
-    color: white;
-}
-
-.blog-grid {
+.grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
 }
 
-.blog-card {
+.card {
     background: white;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
     transition: 0.3s;
 }
 
-.blog-card:hover {
+.card:hover {
     transform: translateY(-5px);
 }
 
-.blog-card span {
-    display: inline-block;
-    margin-bottom: 10px;
-    font-size: 14px;
+.card a {
+    text-decoration: none;
+    color: #111827;
     font-weight: bold;
-    color: #2563eb;
 }
 
-.about {
-    background: #e2e8f0;
-    padding: 50px 20px;
-    text-align: center;
-}
-
+/* FOOTER */
 footer {
     background: #111827;
     color: white;
@@ -116,85 +86,3 @@ footer {
     padding: 20px;
     margin-top: 40px;
 }
-
-@media(max-width:768px){
-    .hero h2 {
-        font-size: 28px;
-    }
-}
-</style>
-</head>
-
-<body>
-
-<header>
-    <h1>The Information Hub</h1>
-    <nav>
-        <a href="#">Home</a>
-        <a href="#blogs">Blogs</a>
-        <a href="#about">About</a>
-    </nav>
-</header>
-
-<section class="hero">
-    <h2>Your Daily Dose of Insights</h2>
-    <p>Lifestyle • Business • Travel • Entertainment • Technology</p>
-</section>
-
-<section class="container" id="blogs">
-    <h2>Explore Categories</h2>
-
-    <div class="categories">
-        <button class="category-btn">Lifestyle</button>
-        <button class="category-btn">Business</button>
-        <button class="category-btn">Travel</button>
-        <button class="category-btn">Entertainment</button>
-        <button class="category-btn">Technology</button>
-    </div>
-
-    <div class="blog-grid">
-
-        <div class="blog-card">
-            <span>Lifestyle</span>
-            <h3>Morning Routines That Boost Productivity</h3>
-            <p>Discover how simple lifestyle habits can transform your daily performance.</p>
-        </div>
-
-        <div class="blog-card">
-            <span>Business</span>
-            <h3>Startup Growth Strategies for 2026</h3>
-            <p>Learn modern business strategies to scale your startup efficiently.</p>
-        </div>
-
-        <div class="blog-card">
-            <span>Travel</span>
-            <h3>Top Hidden Destinations to Explore</h3>
-            <p>Explore unique travel destinations that are still untouched by mass tourism.</p>
-        </div>
-
-        <div class="blog-card">
-            <span>Entertainment</span>
-            <h3>Upcoming Movies to Watch This Year</h3>
-            <p>A quick guide to the most anticipated films and web series.</p>
-        </div>
-
-        <div class="blog-card">
-            <span>Technology</span>
-            <h3>AI Trends Changing the World</h3>
-            <p>How artificial intelligence is transforming industries worldwide.</p>
-        </div>
-
-    </div>
-</section>
-
-<section class="about" id="about">
-    <h2>About The Information Hub</h2>
-    <p>The Information Hub is a modern general blog delivering valuable insights across lifestyle, business, travel, entertainment, and technology. Our mission is to inform, inspire, and empower readers with high-quality content.</p>
-</section>
-
-<footer>
-    © 2026 The Information Hub | All Rights Reserved
-</footer>
-
-</body>
-</html>
